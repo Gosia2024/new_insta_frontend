@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Ustawienie języka dokumentu na angielski -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Ustawienie kodowania znaków na UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Dopasowanie widoku do szerokości ekranu urządzenia -->
+    <title>Create a Post</title> <!-- Tytuł strony: "Create a Post" -->
+    <link rel="stylesheet" href="css/style1.css" /> <!-- Dołączenie zewnętrznego arkusza stylów -->
+    <script src="script.js"></script> <!-- Dołączenie zewnętrznego pliku JavaScript -->
+    <script src="createpost.js" defer></script>
+</head>
+
+<body onload="fetchUser();"> <!-- Wykonanie funkcji fetchUser() przy ładowaniu strony -->
+    <h1>Create a Post</h1> <!-- Nagłówek strony: "Create a Post" -->
+
+    <form id="postFormCreate" enctype="multipart/form-data"> <!-- Formularz z przesyłaniem danych jako multipart/form-data -->
+
+        <!-- Pole wyboru użytkownika -->
+        <label for="user">User:</label> <!-- Etykieta dla pola wyboru użytkownika -->
+        <select id="user" name="user" required> <!-- Lista rozwijana do wyboru użytkownika, wymagana do wypełnienia -->
+            <!-- Użytkownicy zostaną dynamicznie załadowani przez funkcję fetchUser() -->
+        </select>
+
+        <!-- Przesyłanie obrazu -->
+        <label for="image">Upload Image</label> <!-- Etykieta dla pola przesyłania obrazu -->
+        <input type="file" id="image" name="image" accept="image/*" required> <!-- Pole do przesyłania pliku graficznego, wymagane do wypełnienia -->
+
+        <!-- Pole do wpisania lokalizacji -->
+        <label for="location">Location:</label> <!-- Etykieta dla pola lokalizacji -->
+        <input type="text" id="location" name="location" placeholder="Enter location" required> <!-- Pole tekstowe do wpisania lokalizacji, wymagane do wypełnienia -->
+
+        <!-- Pole do wpisania opisu -->
+        <label for="description">Description:</label> <!-- Etykieta dla pola opisu -->
+        <textarea id="description" name="description" rows="4" placeholder="Enter description" required></textarea> <!-- Pole tekstowe (textarea) do wpisania opisu, wymagane do wypełnienia -->
+
+        <!-- Przycisk do przesłania formularza -->
+        <button type="button" onclick="submitPost()">Create Post</button> <!-- Przycisk do utworzenia posta, po kliknięciu wykonuje funkcję submitPost() -->
+    </form>
+    <script src="createpost.js"></script> <!-- Dołączenie skryptu na końcu body -->
+</body>
+
+</html>

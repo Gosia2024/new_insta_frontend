@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram-Clone</title>
+    <link rel="stylesheet" href="./css/style1.css">
+    <script src="./js/script.js"></script>
+</head>
+
+<body  onload="fetchUser(); fetchPosts();">
+    <section class="big">
+        <div class="sidebar">
+            <div class="sidebar-header">Instagram</div>
+            <ul class="suggestions-list">
+                <li><img src="./images/home-button.png" alt=""><span>Home</span> </li>
+                <li><img src="./images/lupe.png" alt=""><span>Explore</span></li>
+                <li><img src="./images/sprechblase.png" alt=""><span>Messages</span></li>
+                <li><img src="./images/herz (1).png" alt=""><span> Notifications</span></li>
+          <!---link do create-->
+                <li> <img src="./images/plus.png" alt="">
+                    <a href="createpost.html"><span>Create</span></a>
+                </li>
+
+               <li><img src="./images/mensch.png" alt=""><span> User Profile</li>
+          
+            </ul>
+        </div>
+        <div class="middle-container">
+            <div class="icons">
+                <img src="./images/nasa.png" alt="">
+                <img src="./images/facebook.png" alt="">
+                <img src="./images/instagram.png" alt="">
+                <img src="./images/moon.jpg" alt="">
+
+            </div>
+            <div id="content" class="content">
+
+                
+        <h2>All Posts</h2>
+        <div id="postsContainer"></div> <!-- Kontener do wyświetlania postów -->
+            </div>
+        </div>
+
+        <div class="suggested-accounts">
+            <div class="icons-suggested">
+            
+                <div class="username">Suggested Accounts</div>
+                <div class="user">
+                    <div class="user-avatar">
+                        <img src="./images/nasa.png" alt="User Avatar">
+                    </div>
+                    <div class="user-follows">
+                    <div class="user-name">Nasa</div>
+                    <div class="follows">Follows you</div>
+                    </div>
+                </div>
+                <div class="user">
+                    <div class="user-avatar">
+                        <img src="./images/facebook.png" alt="User Avatar">
+                    </div>
+                    <div class="user-follows">
+                    <div class="user-name">Facebook</div>
+                    <div class="follows">Follows you</div>
+                    </div>
+                </div>
+                <div class="user">
+                    <div class="user-avatar">
+                        <img src="./images/moon.jpg" alt="User Avatar">
+                    </div>
+                    <div class="user-follows">
+                    <div class="user-name">NoName</div>
+                    <div class="follows">Follows you</div>
+                </div>
+                </div>
+                <div class="user">
+                    <div class="user-avatar">
+                        <img src="./images/mensch.png" alt="User Avatar">
+                    </div>
+                    <div class="user-follows">
+        
+                    <div class="user-name">User 4</div>
+                    <div class="follows">Follows you</div>
+                    </div>
+                </div>
+                <div class="user">
+                    <div class="user-avatar">
+                        <img src="./images/bild23.jpg" alt="User Avatar">
+                    </div>
+                    <div class="user-follows">
+                    <div class="user-name">User 5</div>
+                    <div class="follows">Follows you</div>
+                </div>
+                </div>
+              
+            </div>
+         
+        
+        </div>
+        </div>
+
+    </section>
+    <script src="createpost.js"></script> <!-- Dołączenie skryptu na końcu body -->
+</body>
+
+</html>
